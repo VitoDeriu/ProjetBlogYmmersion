@@ -8,6 +8,7 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
+	"slices"
 )
 
 var Articles []data.ArtStruct
@@ -29,24 +30,21 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	dato = append(dato, Articles[1])
 	//fmt.Println(Articles)
 	//fmt.Println(dato)
-	RandomArticle()
-	RandomArticle()
-	RandomArticle()
-	RandomArticle()
+	//RandomArticle(4)
 	fmt.Println("---------------")
-	InitTemp.Temp.ExecuteTemplate(w, "article", dato)
+	InitTemp.Temp.ExecuteTemplate(w, "home", RandomArticle(4))
 }
 
-func RandomArticle() {
-	var randomart []data.ArtStruct
-	randomIndex := rand.Intn(len(Articles))
+func RandomArticle(nbrArt int) []data.ArtStruct {
 
-	for _, i := range randomart {
-		if Articles[randomIndex] == i {
-			//RandomArticle()
-		} else {
+	var randomart []data.ArtStruct
+
+	for len(randomart) != nbrArt {
+		randomIndex := rand.Intn(len(Articles) - 1)
+		if !slices.Contains(randomart, Articles[randomIndex]) {
 			randomart = append(randomart, Articles[randomIndex])
 		}
 	}
 	fmt.Println(randomart)
+	return randomart
 }

@@ -1,11 +1,15 @@
 package main
 
 import (
-	r "ProjetBlogYmmersion/routeur"
-	t "ProjetBlogYmmersion/temps"
+	// c "ProjetBlogYmmersion/controller"
+
 )
 
+// r "ProjetBlogYmmersion/routeur"
+// t "ProjetBlogYmmersion/temps"
+
 func main() {
-	t.InitTemplate()
-	r.InitServ()
+
+	// t.InitTemplate()
+	// r.InitServ()
 }

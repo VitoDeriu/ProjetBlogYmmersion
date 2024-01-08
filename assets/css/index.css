@@ -1,0 +1,11 @@
+.article{
+flex-direction: column;
+justify-content: center;
+display: flex;
+}
+
+.range{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

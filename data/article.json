@@ -1,0 +1,26 @@
+[
+    {
+        "name": "nom du premier article",
+        "id": "0001",
+        "img": "http://routeimage",
+        "auteur": "nom de l'auteur",
+        "date": "08/01/2024",
+        "content": "le corps de l'article"
+    },
+    {
+        "name": "nom du deuxieme article",
+        "id": "0002",
+        "img": "http://routeimage",
+        "auteur": "nom de l'auteur",
+        "date": "08/01/2024",
+        "content": "le corps de l'article"
+    },
+    {
+        "name": "nom du troisieme article",
+        "id": "0003",
+        "img": "http://routeimage",
+        "auteur": "nom de l'auteur",
+        "date": "08/01/2024",
+        "content": "le corps de l'article"
+    }
+]

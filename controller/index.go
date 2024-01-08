@@ -1,20 +1,28 @@
 package controller
 
 import (
+	"ProjetBlogYmmersion/data"
 	InitTemp "ProjetBlogYmmersion/temps"
 	"encoding/json"
+	"fmt"
 	"net/http"
+	"os"
 )
 
-var article ArtStruct
+var Articles []data.ArtStruct
 
 func GetDataFromJson() {
 
-	os.ReadFile("ProjetBlogYmmersion/data")
-
-	json.Unmarshal(article, &article)
+	data, err := os.ReadFile("data/article.json")
+	if err != nil {
+		fmt.Println("Erreur lors de la lecture du fichier:", err)
+		return
+	}
+	json.Unmarshal(data, &Articles)
 }
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	InitTemp.Temp.ExecuteTemplate(w, "home", nil)
+	GetDataFromJson()
+	fmt.Println(Articles)
+	InitTemp.Temp.ExecuteTemplate(w, "home", Articles)
 }

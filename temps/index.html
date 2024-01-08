@@ -8,12 +8,15 @@
 </head>
 <body>
     <header>ici le header</header>
-    <div>ici le corps du site avec les articles aléatoires
-        {{article}}
-        {{article}}
-        {{article}}
-        {{article}}
-    </div>
+        <div>ici le corps du site avec les articles aléatoires
+            <div class="article">
+                {{range .}}
+                    <div class="range">
+                {{.Name}}
+                    </div>
+                {{end}}
+            </div>
+        </div>
     <footer>ici le footer</footer>
 </body>
 </html>

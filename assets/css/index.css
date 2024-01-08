@@ -1,11 +1,6 @@
-.article{
-flex-direction: column;
-justify-content: center;
-display: flex;
-}
+header{
+    background-size: cover;
+    background-color: #58017a;
 
-.range{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+
 }

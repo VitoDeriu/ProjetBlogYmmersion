@@ -39,17 +39,17 @@ func GetRandomArticles() []data.ArtStruct {
 // mainfunc pour la page home
 func Home(w http.ResponseWriter, r *http.Request) {
 
-	var dato []data.ArtStruct
-	GetDataFromJson()
-	dato = append(dato, Articles[1])
-	//fmt.Println(Articles)
-	//fmt.Println(dato)
-	RandomArticle()
-	RandomArticle()
-	RandomArticle()
-	RandomArticle()
-	fmt.Println("---------------")
-	InitTemp.Temp.ExecuteTemplate(w, "article", dato)
+	// var dato []data.ArtStruct
+	// GetDataFromJson()
+	// dato = append(dato, Articles[1])
+	// //fmt.Println(Articles)
+	// //fmt.Println(dato)
+	// RandomArticle()
+	// RandomArticle()
+	// RandomArticle()
+	// RandomArticle()
+	// fmt.Println("---------------")
+	InitTemp.Temp.ExecuteTemplate(w, "home", nil)
 }
 
 func RandomArticle() {

@@ -1,7 +1,7 @@
 package routeur
 
 import (
-	ctrl "ProjetBlogYmmersion/controller"
+	"ProjetBlogYmmersion/controller"
 	"fmt"
 	"net/http"
 	"os"
@@ -9,7 +9,7 @@ import (
 
 func InitServ() {
 
-	http.HandleFunc("/", ctrl.Home)
+	http.HandleFunc("/", controller.Home)
 
 	rootDoc, _ := os.Getwd()
 	fileserver := http.FileServer(http.Dir(rootDoc + "/assets"))

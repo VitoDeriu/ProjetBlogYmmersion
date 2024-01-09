@@ -37,7 +37,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
     }
 	defer file.Close()
 
-	filePath := filepath.Join("./","assets", "img", handler.Filename)
+	filePath := filepath.Join("assets", "img", handler.Filename)
 	outFile, err := os.Create(filePath)
 	if err != nil {
 		fmt.Println("Error creating the file")

@@ -21,7 +21,7 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	GetDataFromJson()
-	InitTemp.Temp.ExecuteTemplate(w, "ajout", RandomArticle(4))
+	InitTemp.Temp.ExecuteTemplate(w, "home", RandomArticle(4))
 }
 
 // récupération des données du json et envoie dans la structure ArtStruct

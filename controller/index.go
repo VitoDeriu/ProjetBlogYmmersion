@@ -21,8 +21,11 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	GetDataFromJson()
-	InitTemp.Temp.ExecuteTemplate(w, "ajout", RandomArticle(4))
-	
+	InitTemp.Temp.ExecuteTemplate(w, "home", RandomArticle(4))
+
+}
+func Ajout(w http.ResponseWriter, r *http.Request) {
+	InitTemp.Temp.ExecuteTemplate(w, "ajout", nil)
 }
 
 // récupération des données du json et envoie dans la structure ArtStruct
@@ -97,10 +100,10 @@ func GetAllArticles() []data.ArtStruct {
 	return Articles
 }
 
-func GetCurrentTime()string{
-   
-    currentTime := time.Now()
+func GetCurrentTime() string {
+
+	currentTime := time.Now()
 	timeFormatted := currentTime.Format("02-January-2006, 15:04")
-    
-    return timeFormatted
+
+	return timeFormatted
 }

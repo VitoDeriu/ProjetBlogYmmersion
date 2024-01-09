@@ -9,6 +9,11 @@ import (
 	"os"
 	"path/filepath"
 )
+
+func Ajout (w http.ResponseWriter, r *http.Request){
+	temps.Temp.ExecuteTemplate(w, "ajout", nil)
+}
+
 /*var filePath string
 func Ajout(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {

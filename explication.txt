@@ -1,0 +1,4 @@
+on a 3 catégorie 
+    cat 1 : esport
+    cat 2 : actu
+    cat 3 : tuto

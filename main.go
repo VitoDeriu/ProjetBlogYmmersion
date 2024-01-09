@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	temps.InitTemplate()
 	routeur.InitServ()
 }

@@ -17,7 +17,7 @@ func InitServ() {
 	http.HandleFunc("/explication", controller.Explications)
 	http.HandleFunc("/mentions-legales", controller.MentionsLegales)
 	http.HandleFunc("/rechercher", controller.RechercheTemp)
-	
+
 	//ne pas oublier de faire la route error 404, je sais plus comment elle se fait y'a un truc particulier dans la gestion d'erreur a mettre.
 
 	rootDoc, _ := os.Getwd()

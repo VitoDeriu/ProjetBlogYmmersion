@@ -1,0 +1,32 @@
+{
+    "esport": [
+        {
+            "name": "nom du premier article",
+            "id": "0001",
+            "img": "http://routeimage",
+            "auteur": "nom de l'auteur",
+            "date": "08/01/2024",
+            "content": "le corps de l'article"   
+        }
+    ],
+    "actu": [
+        {
+            "name": "nom du premier article",
+            "id": "0001",
+            "img": "http://routeimage",
+            "auteur": "nom de l'auteur",
+            "date": "08/01/2024",
+            "content": "le corps de l'article"  
+        }
+    ],
+    "carte": [
+        {
+            "name": "nom du premier article",
+            "id": "0001",
+            "img": "http://routeimage",
+            "auteur": "nom de l'auteur",
+            "date": "08/01/2024",
+            "content": "le corps de l'article"  
+        }
+    ]
+}

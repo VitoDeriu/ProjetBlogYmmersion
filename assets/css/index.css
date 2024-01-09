@@ -1,4 +1,133 @@
-header{
-    background-size: cover;
-    background-color: #58017a;
-}
+body {
+    background-color: #f8f9fa;
+    font-family: 'Nunito', sans-serif;
+    color: #495057;
+   }
+   
+   a {
+    color: #4e73df;
+    text-decoration: none;
+   }
+   
+   a:hover {
+    color: #2e59d9;
+    text-decoration: none;
+   }
+   
+   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #4e73df;
+   }
+   
+   .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+   }
+   
+   .btn-primary {
+    color: #fff;
+    background-color: #4e73df;
+    border-color: #4e73df;
+   }
+   
+   .btn-primary:hover {
+    color: #fff;
+    background-color: #2e59d9;
+    border-color: #2e59d9;
+   }
+   
+   .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+   }
+   
+   .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+   }
+   
+   .card-title {
+    margin-bottom: .75rem;
+   }
+   
+   .card-subtitle {
+    margin-top: -.375rem;
+    margin-bottom: 0;
+   }
+   
+   .card-text:last-child {
+    margin-bottom: 0;
+   }
+   
+   .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+   }
+   
+   @media (min-width: 576px) {
+    .container {
+       max-width: 540px;
+    }
+   }
+   
+   @media (min-width: 768px) {
+    .container {
+       max-width: 720px;
+    }
+   }
+   
+   @media (min-width: 992px) {
+    .container {
+       max-width: 960px;
+    }
+   }
+   
+   @media (min-width: 1200px) {
+    .container {
+       max-width: 1140px;
+    }
+   }
+   
+   .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+   }
+   
+   .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15
+   }

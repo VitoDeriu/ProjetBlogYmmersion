@@ -1,9 +1,102 @@
+@font-face{
+    font-family: "Righteous";
+    src: url(../font/Righteous-Regular.ttf);
+ }
+
+ :root{
+    --font-Righteous: "Righteous";
+
+    --main-bg-color: #0E0C10;
+    --hover-bg-color: #2f3747;
+
+    --main-font-color: aliceblue;
+}
+
+.main{
+    font-family: var(--font-Righteous);
+    color: var(--main-font-color);
+    background-image: url(../img/abstract-technological-background_23-2148897676.png);
+    background-size: cover;
+    margin-top: 100px;
+}
+
 header{
     margin: 0px;
     padding: 0px;
-    height: 100%;
-    background-color: #0E0C10;
-    color: #9AA0A6;
-    font-family: "Righteous";
+    /* height: 100%; */
+    color: var(--main-font-color);
+    font-family: var(--font-Righteous);
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--main-bg-color);
+    height: 100px;
+
+    /* background: rgb(131,58,180);
+    background: linear-gradient(247deg, rgba(131,58,180,1) 0%, rgba(29,71,253,1) 34%, rgba(252,69,174,1) 100%); */
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+}
+
+
+.topnav{
+    display: flex;
+    width: 70vw;
+    align-items: center;
+}
+
+.cat-btn:hover {
+    background-color: var(--hover-bg-color) ;
+    border-radius: 100px;
+    background: rgba(204, 121, 255, 0.3);
+    border-radius: 100px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.cat-btn{
+    width: 200px;
+    height: 60px;
+    border-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-name{
+    color: var(--main-font-color);
+    text-decoration: none;
+    font-size: 2em;
  }
 
+.admin-btn:hover {
+    background-color: var(--hover-bg-color) ;
+    border-radius: 100px;
+    background: rgba(204, 121, 255, 0.3);
+    border-radius: 100px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.admin-btn{
+    width: 200px;
+    height: 60px;
+    border-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-name{
+    color: var(--main-font-color);
+    text-decoration: none;
+    font-size: 1em;
+ }

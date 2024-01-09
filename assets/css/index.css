@@ -1,45 +1,13 @@
-@font-face{
-   font-family: "Righteous";
-   src: url(../font/Righteous-Regular.ttf);
+.article{
+   height: 400px;
+   width: 1500px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border: solid 1px;
 }
 
-body{
-   margin: 0px;
-   padding: 0px;
-   background-color: #0E0C10;
-   color: aliceblue;
-   font-family: "Righteous";
-}
-
-/* header{
-   margin: 0px;
-   padding: 0px;
-   height: 100%;
-   background-color: #0E0C10;
-   font-family: "Righteous";
-} */
-
-.cat-btn{
-   width: 100px;
-   height: 60px;
-   border-color: none;
-   background-color: none;
-   ;
-}
-
-.cat-name{
-   color: aliceblue;
-}
-
-.topnav{
+.main{
    display: flex;
    justify-content: space-around;
-   size: 50vw;
+   align-items: column;
 }
-
-/* .header{
-
-   font-family: "Righteous";
-   color: aliceblue;
-   size: ;
-} */

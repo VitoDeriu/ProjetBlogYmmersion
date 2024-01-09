@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"slices"
+	"time"
 )
 
 var Articles []data.ArtStruct
@@ -20,7 +21,7 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	GetDataFromJson()
-	InitTemp.Temp.ExecuteTemplate(w, "home", RandomArticle(4))
+	InitTemp.Temp.ExecuteTemplate(w, "ajout", RandomArticle(4))
 }
 
 // récupération des données du json et envoie dans la structure ArtStruct
@@ -45,16 +46,13 @@ func SetDataToJson() {
 
 // fonction pour récupèrer un nombre d'article aléatoire
 func RandomArticle(nbrArt int) []data.ArtStruct {
-
 	var randomart []data.ArtStruct
-
 	for len(randomart) != nbrArt {
 		randomIndex := rand.Intn(len(Articles) - 1)
 		if !slices.Contains(randomart, Articles[randomIndex]) {
 			randomart = append(randomart, Articles[randomIndex])
 		}
 	}
-	fmt.Println(randomart)
 	return randomart
 }
 
@@ -78,4 +76,30 @@ func RemoveArticle(index int, save bool) {
 	if save {
 		SetDataToJson()
 	}
+}
+
+// fonction pour récupèrer les articles d'une catégorie précise
+func GetArticles(category string) []data.ArtStruct {
+	GetDataFromJson()
+	var articles []data.ArtStruct
+	for _, article := range Articles {
+		if article.Category == category {
+			articles = append(articles, article)
+		}
+	}
+	return articles
+}
+
+// fonction pour récupèrer tous les articles toutes catégories confondues
+func GetAllArticles() []data.ArtStruct {
+	GetDataFromJson()
+	return Articles
+}
+
+func GetCurrentTime()string{
+   
+    currentTime := time.Now()
+	timeFormatted := currentTime.Format("02-January-2006, 15:04")
+    
+    return timeFormatted
 }

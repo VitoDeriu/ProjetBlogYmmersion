@@ -8,9 +8,10 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"time"
 )
 
-func Ajout (w http.ResponseWriter, r *http.Request){
+func Ajout(w http.ResponseWriter, r *http.Request) {
 	temps.Temp.ExecuteTemplate(w, "ajout", nil)
 }
 
@@ -46,17 +47,15 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 
 	//Créa de l'img dans le dossier /assets/img
 
-	filePath := filepath.Join(/*"assets", "img",*/ handler.Filename)
+	filePath := filepath.Join( /*"assets", "img",*/ handler.Filename)
 	outFile, err := os.Create(filePath)
 	if err != nil {
 		fmt.Println("Error creating the file")
 		fmt.Println(err)
 		return
 	}
-	
+
 	defer outFile.Close()
-
-
 
 	_, err = io.Copy(outFile, file)
 	if err != nil {
@@ -83,3 +82,19 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// fonction pour ajouter un article à notre tableau et potentiellement au json
+func AddArticle(article data.ArtStruct, save bool) {
+	GetDataFromJson()
+	Articles = append(Articles, article)
+	if save {
+		SetDataToJson()
+	}
+}
+
+func GetCurrentTime() string {
+
+	currentTime := time.Now()
+	timeFormatted := currentTime.Format("02-January-2006, 15:04")
+
+	return timeFormatted
+}

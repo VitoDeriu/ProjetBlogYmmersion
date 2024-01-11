@@ -12,7 +12,7 @@ func RechercheTemp(w http.ResponseWriter, r *http.Request) {
 	temps.Temp.ExecuteTemplate(w, "recherche", data)
 }
 
-// Fonction de recherche par mot-clé
+// Fonction de recherche par Nom
 func SearchName(q string) []data.ArtStruct {
 	var pertinentArticles []data.ArtStruct
 	for _, article := range Articles {

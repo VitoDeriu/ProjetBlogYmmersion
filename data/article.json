@@ -1,7 +1,7 @@
 [
   {
     "name": "nom du premier article",
-    "id": "0001",
+    "id": 1,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "nom de l'auteur",
     "date": "08/01/2024",
@@ -10,7 +10,7 @@
   },
   {
     "name": "nom du deuxieme article",
-    "id": "0002",
+    "id": 2,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "nom de l'auteur",
     "date": "08/01/2024",
@@ -19,7 +19,7 @@
   },
   {
     "name": "nom du troisieme article",
-    "id": "0003",
+    "id": 3,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "nom de l'auteur",
     "date": "08/01/2024",
@@ -28,7 +28,7 @@
   },
   {
     "name": "nom du quatrieme article",
-    "id": "0004",
+    "id": 4,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "nom de l'auteur",
     "date": "08/01/2024",
@@ -37,7 +37,7 @@
   },
   {
     "name": "nom du cinquieme article",
-    "id": "0005",
+    "id": 5,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "nom de l'auteur",
     "date": "08/01/2024",
@@ -46,7 +46,7 @@
   },
   {
     "name": "nom du sixieme article",
-    "id": "0006",
+    "id": 6,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "nom de l'auteur",
     "date": "08/01/2024",
@@ -55,7 +55,7 @@
   },
   {
     "name": "nom du septieme article",
-    "id": "0007",
+    "id": 7,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "nom de l'auteur",
     "date": "08/01/2024",
@@ -64,7 +64,7 @@
   },
   {
     "name": "nom du huitieme article",
-    "id": "0008",
+    "id": 8,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "nom de l'auteur",
     "date": "08/01/2024",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Title",
-    "id": "0009",
+    "id": 9,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "Author",
     "date": "09-January-2024, 13:38",
@@ -82,7 +82,7 @@
   },
   {
     "name": "Title",
-    "id": "0010",
+    "id": 10,
     "img": "https://www.afjv.com/2023/02/230213-jeux-video.jpg",
     "auteur": "Author",
     "date": "09-January-2024, 13:39",

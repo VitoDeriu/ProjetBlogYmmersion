@@ -75,6 +75,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		Article.Category = r.FormValue("category")
 		Article.Date = GetCurrentTime()
 		Article.Img = filePath
+		Article.Id = GetArticleId()
 		fmt.Println(filePath)
 		AddArticle(Article, true)
 	} else if r.Method == "GET" {
@@ -91,10 +92,17 @@ func AddArticle(article data.ArtStruct, save bool) {
 	}
 }
 
+// Fonction qui récup la date et l'heure
 func GetCurrentTime() string {
 
 	currentTime := time.Now()
 	timeFormatted := currentTime.Format("02-January-2006, 15:04")
 
 	return timeFormatted
+}
+
+// Fonction qui récup la longueur du tableau d'Articles +1 pour un nouvel article
+func GetArticleId() int {
+	id := len(Articles) + 1
+	return id
 }

@@ -1,11 +1,16 @@
-/* .article{
-   height: 400px;
-   width: 1500px;
+.article{
+   height: 200px;
+   width: 95%;
    border: solid 1px;
+   margin: 20px;
 }
 
 .main{
    display: flex;
-   justify-content: space-around;
-   align-items: column;
-} */
+   flex-direction: column;
+   justify-content: center;
+   width: 90%; 
+   border: 1px solid;
+   margin: 5px;
+   background-color: #fff;
+}

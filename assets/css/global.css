@@ -38,8 +38,10 @@ html {
 }
 
 body {
-  display: block;
+  display: flex;
   margin: 0 8px 0 8px;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -58,7 +60,7 @@ footer {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
-background-color: #292929;
+  background-color: #292929;
 }
 
 .logo-footer img {
@@ -75,12 +77,9 @@ background-color: #292929;
     color: rgb(163, 163, 163);
 }
 
-
-
 .footer-links {
   display: flex;
   justify-content: center;
-
 }
 
 .footer-links a{
@@ -101,7 +100,6 @@ background-color: #292929;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-
 }
 
 .navbar .logo {
@@ -116,7 +114,7 @@ background-color: #292929;
 .cat-name {
   color: var(--main-font-color);
   text-decoration: none;
-  font-size: 2em;
+  font-size: 2vw;
   margin: 0 10px 0 10px;
 }
 
@@ -132,8 +130,8 @@ background-color: #292929;
 }
 
 .cat-btn {
-  width: 200px;
-  height: 60px;
+  width: 10vw;
+  height: 5vh;
   border-color: none;
   display: flex;
   justify-content: center;
@@ -141,8 +139,8 @@ background-color: #292929;
 }
 
 .cat-btn-active {
-  width: 200px;
-  height: 60px;
+  width: 10vw;
+  height: 5vh;
   border-color: none;
   display: flex;
   justify-content: center;
@@ -159,7 +157,8 @@ background-color: #292929;
 
 .searchBox{
     background: #7f7f7f;
-    height: 40px;
+    height: 5vh;
+    width: 20vw;
     border-radius: 40px;
     padding: 10px;
     display: flex;
@@ -174,14 +173,16 @@ background-color: #292929;
     color: white;
     outline:none;
     font-size: 20px;
+    width: 100%;
 
 }
 
 .searchButton{
     color: white;
     float: right;
-    width: 40px;
-    height: 40px;
+    /* width: 40px;
+    height: 40px; */
+    height: 100%;
     border-radius: 50%;
     background: #2f3640;
 }

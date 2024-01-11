@@ -14,19 +14,35 @@
             <a href="" class="logo"><img src="../static/img/logo_PGM.png" alt="logo PGM"></a>
             <div class="nav-links">
                 <a href="/" class="cat-name">
-                    <div class="cat-btn-active">Accueil</div>
+                    <div class="cat-btn">Accueil</div>
                 </a>
                 <a href="/categorie?type=actu" class="cat-name">
+                    {{if eq .Type "actu"}}
+                    <div class="cat-btn-active">Actualités</div>
+                    {{else}}
                     <div class="cat-btn">Actualités</div>
+                    {{end}}
                 </a> 
                 <a href="/categorie?type=tuto" class="cat-name">
+                    {{if eq .Type "tuto"}}
+                    <div class="cat-btn-active">Tutoriels</div>
+                    {{else}}
                     <div class="cat-btn">Tutoriels</div>
+                    {{end}}
                 </a>
                 <a href="/categorie?type=esport" class="cat-name">
-                    <div class="cat-btn">E-sport</div>
+                    {{if eq .Type "esport"}}
+                    <div class="cat-btn-active">E-Sport</div>
+                    {{else}}
+                    <div class="cat-btn">E-Sport</div>
+                    {{end}}
                 </a>
                 <a href="/admin" class="cat-name">
+                    {{if eq .Type "admin"}}
+                    <div class="cat-btn-active">Admin</div>
+                    {{else}}
                     <div class="cat-btn">Admin</div>
+                    {{end}}
                 </a>
             </div>
             <div class="searchBox">

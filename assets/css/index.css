@@ -42,7 +42,7 @@
 
 .article-title{
    white-space: nowrap;
-   overflow:clip;
+   overflow: clip;
    text-overflow: ellipsis;
 }
 

@@ -8,8 +8,13 @@ import (
 )
 
 func Categorie(w http.ResponseWriter, r *http.Request) {
-	data := SearchCategory(r.URL.Query().Get("type"))
-	temps.Temp.ExecuteTemplate(w, "categorie", data)
+	dataa := SearchCategory(r.URL.Query().Get("type"))
+	type test struct {
+		Data []data.ArtStruct
+		Type string
+	}
+	toSend := test{Data: dataa, Type: r.URL.Query().Get("type")}
+	temps.Temp.ExecuteTemplate(w, "categorie", toSend)
 }
 
 // Fonction de recherche par catégorie

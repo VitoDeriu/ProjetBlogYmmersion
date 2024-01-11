@@ -10,7 +10,7 @@ body {
     background-color: #202124;
     color: #9AA0A6;
     line-height: 1.6;
-    background-image: url('404.jpg');
+    background-image: url('/static/img/404.jpg');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 

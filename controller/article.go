@@ -3,12 +3,15 @@ package controller
 import (
 	"ProjetBlogYmmersion/data"
 	"ProjetBlogYmmersion/temps"
+	"fmt"
 	"net/http"
 	"strings"
 )
 
 func ArticleTemp(w http.ResponseWriter, r *http.Request) {
-	data := SearchId(r.URL.Query().Get("id"))
+	data := SearchId(r.URL.Query().Get("type"))
+	fmt.Println(r.URL.Query().Get("type"))
+	fmt.Println(data)
 	temps.Temp.ExecuteTemplate(w, "article", data)
 }
 

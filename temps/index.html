@@ -37,8 +37,8 @@
     </header>
 
     <div class="main">
-        <a href="/article?type={{Id.}}">
-            {{range .}}
+        {{range .}}
+            <a href="/article?type={{.Id}}">
                 <div class="article">
                     <img src={{.Img}} alt="image de l'article" class="article-img">
                     <div class="article-text">
@@ -48,8 +48,8 @@
                         <div class="date">{{.Date}}</div>
                     </div>
                 </div>
-            {{end}}
-        </a>
+            </a>
+        {{end}}
     </div>          
     <footer>
         <div class="nav-footer">

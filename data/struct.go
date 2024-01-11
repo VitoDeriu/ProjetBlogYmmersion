@@ -8,4 +8,5 @@ type ArtStruct struct {
 	Date     string `json:"date"`
 	Content  string `json:"content"`
 	Category string `json:"category"`
+	Preview  string `json:"preview"`
 }

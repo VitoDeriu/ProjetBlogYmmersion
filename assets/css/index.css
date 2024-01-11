@@ -24,6 +24,7 @@
    background-color: #fff;
    color: black;
    align-items: center;
+   overflow: clip;
 }
 
 .article-img{
@@ -42,7 +43,7 @@
 
 .article-title{
    white-space: nowrap;
-   overflow: clip;
+
    text-overflow: ellipsis;
 }
 
@@ -54,4 +55,18 @@
    margin: 5px;
    background-color: #3b3b3b;
    color: aliceblue;
+}
+
+.content{
+   display: flex;
+}
+.sidebar-left{
+   display: flex;
+   width: 15vw;
+   align-items: center;
+}
+.sidebar-right{
+   display: flex;
+   width: 15vw;
+   align-items: center;
 }

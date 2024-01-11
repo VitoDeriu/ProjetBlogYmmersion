@@ -41,7 +41,7 @@
         </div>
         <div class="main">
             {{range .}}
-                <a href="/article?type={{.Id}}">
+            <a href="/article?type={{.Id}}">
                 <div class="article">
                         <img src={{.Img}} alt="image de l'article" class="article-img">
                         <div class="article-text">
@@ -50,8 +50,8 @@
                             <div class="art-pvw">{{.Preview}}</div>
                             <div class="date">{{.Date}}</div>
                         </div>
-                    </div>
-                </a>
+                </div>
+            </a>
         {{end}}
         </div> 
         <div class="sidebar-right">

@@ -35,14 +35,28 @@
             </div>
         </nav>
     </header>
-
-
+<div class="content">
     <a href="/ajout" class="bouton">Ajouter un article</a>
-    elle permettra d'administrer les articles
-du blog, en affichant la liste des articles triés par catégorie la liste
-des articles avec un bouton qui laisse la possibilité de supprimer
-l'article. Il faudra également ajouter un bouton pour pouvoir ajouter
-un article.
+    <div class="main">
+        <div class="article">
+            {{range .}}
+                <div class="article">
+                    <img src={{.Img}} alt="image de l'article" class="article-img">
+                    <div class="article-text">
+                        <h1 class="article-title">{{.Name}}</h1>
+                        <div class="cat-art">{{.Category}}</div>
+                        <div class="date">{{.Date}}</div>
+                    </div>
+                </div>
+            {{end}}
+        </div>
+    </div>
+
+</div>
+
+    
+
+    
 
 
 <footer>

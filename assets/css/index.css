@@ -28,7 +28,7 @@
    color: black;
    align-items: center;
    overflow: clip;
-
+   border-radius: 20px;
 }
 
 .article-img{
@@ -36,7 +36,7 @@
    height: 180px;
    object-fit: cover;
    padding-left: 10px;
-
+   border-radius: 20px;
 }
 
 .article-text{
@@ -61,12 +61,11 @@
    margin: 5px;
    background-color: #3b3b3b;
    color: aliceblue;
-
+   border-radius: 20px;
 }
 
 .content{
    display: flex;
-
 }
 .sidebar-left{
    display: flex;

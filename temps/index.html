@@ -37,35 +37,18 @@
     </header>
 
     <div class="main">
+        {{range .}}
         <div class="article">
-            <img src="" alt="image de l'article">
-            <h1>Titre de l'article</h1>
-            <div class="cat-art">catégorie de l'article</div>
-            <div class="art-ctn">appercu de l'article</div>
-            <div class="date">date de l'article</div>
+            <img src={{.Img}} alt="image de l'article" class="article-img">
+            <div class="article-text">
+                <h1 class="article-title">{{.Name}}</h1>
+                <div class="cat-art">{{.Category}}</div>
+                <div class="art-ctn">{{.Content}}</div>
+                <div class="date">{{.Date}}</div>
+            </div>
         </div>
-        <div class="article">
-            <img src="" alt="image de l'article">
-            <h1>Titre de l'article</h1>
-            <div class="cat-art">catégorie de l'article</div>
-            <div class="art-ctn">appercu de l'article</div>
-            <div class="date">date de l'article</div>
-        </div>
-        <div class="article">
-            <img src="" alt="image de l'article">
-            <h1>Titre de l'article</h1>
-            <div class="cat-art">catégorie de l'article</div>
-            <div class="art-ctn">appercu de l'article</div>
-            <div class="date">date de l'article</div>
-        </div>
-        <div class="article">
-            <img src="" alt="image de l'article">
-            <h1>Titre de l'article</h1>
-            <div class="cat-art">catégorie de l'article</div>
-            <div class="art-ctn">appercu de l'article</div>
-            <div class="date">date de l'article</div>
-        </div>
-    </div>        
+        {{end}}
+    </div>          
     <footer>
         <div class="nav-footer">
             <div class="top-footer">

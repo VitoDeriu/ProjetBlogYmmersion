@@ -1,4 +1,4 @@
-.article{
+/* .article{
    height: 200px;
    width: 95%;
    border: solid 1px;
@@ -13,4 +13,45 @@
    border: 1px solid;
    margin: 5px;
    background-color: #fff;
+} */
+
+.article{
+   height: 200px;
+   width: 95%;
+   border: solid 1px;
+   margin: 20px;
+   display: flex;
+   background-color: #fff;
+   color: black;
+   align-items: center;
+}
+
+.article-img{
+   width: 180px;
+   height: 180px;
+   object-fit: cover;
+   padding-left: 10px;
+}
+
+.article-text{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0 10px;
+}
+
+.article-title{
+   white-space: nowrap;
+   overflow:clip;
+   text-overflow: ellipsis;
+}
+
+.main{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 95%; 
+   margin: 5px;
+   background-color: #3b3b3b;
+   color: aliceblue;
 }

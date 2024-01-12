@@ -43,7 +43,7 @@
             votre pub ici
         </div>
         <div class="main">
-            {{range .Data}}
+            {{range .}}
             <a href="/article?type={{.Id}}">
                 <div class="article">
                         <img src="../static/img/{{.Img}}" alt="image de l'article" class="article-img">
@@ -61,19 +61,6 @@
             votre pub ici
         </div> 
     </div>
-
-    
-    elle affiche la liste des articles dont les
-mots indiqués dans la barre de recherche sont contenus dans le
-titre des articles.
-
-
-
-{{range .}}
- {{.}}
-{{end}}
-
-
 
 <footer>
     <div class="nav-footer">

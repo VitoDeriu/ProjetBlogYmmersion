@@ -10,8 +10,7 @@
   {
     "name": "L'ascension fulgurante de l'e-sport : Une révolution dans le monde du divertissement numérique",
     "id": 1,
-    "img": "Une photo d'une foule en délire lors d'un tournoi e-sport avec des lumières vives et des écrans géants",
-    "auteur": "Maxime Gamer",
+    "img": "../static/img/kcx.webp",
     "date": "15/03/2023",
     "content": "L'e-sport, autrefois considéré comme un passe-temps de niche, a évolué pour devenir une force dominante dans l'industrie du divertissement numérique. Cet article plonge dans les racines de l'e-sport, explore son essor rapide et analyse son impact profond sur la culture populaire. Des chiffres impressionnants, des moments historiques et des témoignages de joueurs emblématiques marquent cette révolution, révélant comment l'e-sport a conquis le cœur de millions de fans à travers le monde.",
     "preview": "L'e-sport, autrefois considéré comme un passe-temps de niche, a évolué pour devenir...",
@@ -256,7 +255,7 @@
   {
     "name": "Nouvelle extension annoncée pour un jeu e-sport populaire",
     "id": 26,
-    "img": "Illustration conceptuelle de la nouvelle extension du jeu",
+    "img": "../static/img/info.jpg",
     "auteur": "Inven Global",
     "date": "03/07/2023",
     "category": "news"
@@ -264,7 +263,7 @@
   {
     "name": "Changement de format pour la prochaine saison de la ligue Overwatch",
     "id": 27,
-    "img": "Graphique expliquant le nouveau format de la ligue Overwatch",
+    "img": "../static/img/bot.jpg",
     "auteur": "The Washington Post",
     "date": "14/08/2023",
     "category": "news"
@@ -272,7 +271,7 @@
   {
     "name": "Joueur de 15 ans devient le plus jeune champion du monde de Fortnite",
     "id": 28,
-    "img": "Le jeune champion soulevant le trophée",
+    "img": "../static/img/15.jpg",
     "auteur": "BBC Sport",
     "date": "05/09/2023",
     "category": "news"
@@ -280,7 +279,7 @@
   {
     "name": "Investissement massif dans une équipe e-sport par une entreprise technologique",
     "id": 29,
-    "img": "Logo de l'équipe avec le logo de l'entreprise technologique",
+    "img": "../static/img/Gentle-Mates.jpg",
     "auteur": "CNBC",
     "date": "20/10/2023",
     "category": "news"
@@ -288,7 +287,7 @@
   {
     "name": "Nouveau tournoi de jeu de cartes en ligne attire des millions de spectateurs",
     "id": 30,
-    "img": "Capture d'écran de la finale avec des animations de cartes à l'écran",
+    "img": "../static/img/cartes.jpg",
     "auteur": "Polygon",
     "date": "12/11/2023",
     "category": "news"

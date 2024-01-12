@@ -16,8 +16,8 @@ func Categorie(w http.ResponseWriter, r *http.Request) {
 	}
 	toSend := test{Data: dataa, Type: r.URL.Query().Get("type")}
 	fmt.Println(r.URL.Query().Get("type"))
-	fmt.Println(toSend)
-	fmt.Println(dataa)
+	//fmt.Println(toSend)
+	//fmt.Println(dataa)
 	temps.Temp.ExecuteTemplate(w, "categorie", toSend)
 }
 

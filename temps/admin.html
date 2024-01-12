@@ -16,7 +16,7 @@
                 <a href="/" class="cat-name">
                     <div class="cat-btn">Accueil</div>
                 </a>
-                <a href="/categorie?type=actu" class="cat-name">
+                <a href="/categorie?type=news" class="cat-name">
                     <div class="cat-btn">Actualités</div>
                 </a> 
                 <a href="/categorie?type=tuto" class="cat-name">
@@ -53,8 +53,8 @@
                         </div> 
                     </div>
                     <div>
-                    <form action="">
-                        <input type="submit" value="Suppr" class="suppr-art-btn">
+                    <form action="" method="post">
+                        <input type="submit" value="{{.Id}}" name="Suppr" id="Suppr" class="suppr-art-btn">
                     </form> 
                     </div>                  
                 </div>    

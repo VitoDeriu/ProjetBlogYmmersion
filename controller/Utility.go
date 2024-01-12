@@ -37,14 +37,26 @@ func GetAllArticles() []data.ArtStruct {
 	return Articles
 }
 
+func ArticleExist(id int) bool {
+	GetDataFromJson()
+	for _, art := range Articles {
+		if art.Id == id {
+			return true
+		}
+	}
+	return false
+}
+
 // fonction pour supprimer un article de notre tableau et potentiellement du json
 func RemoveArticle(index int, save bool) {
 	GetDataFromJson()
-	for i := 0; i < len(Articles); i++ {
-		if i == index {
-			Articles = append(Articles[:i], Articles[i+1:]...)
+	var NewArt []data.ArtStruct
+	for _, art := range Articles {
+		if art.Id != index {
+			NewArt = append(NewArt, art)
 		}
 	}
+	Articles = NewArt
 	if save {
 		SetDataToJson()
 	}

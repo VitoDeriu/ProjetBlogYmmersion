@@ -51,8 +51,10 @@
             </div>
         </nav>
     </header>
-
-
+    <div class="content">
+    <div class="sidebar-left">
+        votre pub ici
+    </div>
     <div class="main">
         {{range .Data}}
         <a href="/article?type={{.Id}}">
@@ -68,7 +70,10 @@
         </a>
     {{end}}
     </div> 
-
+    <div class="sidebar-right">
+        votre pub ici
+    </div> 
+</div>
 <footer>
     <div class="nav-footer">
         <div class="top-footer">

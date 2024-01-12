@@ -30,8 +30,10 @@
                 </a>
             </div>
             <div class="searchBox">
-                <input class="searchInput"type="text" name="" placeholder="Rechercher">
-                <button class="searchButton" type="submit" href="#">Go</button>
+                <form action="/rechercher" method="POST">
+                    <input class="searchInput"type="text" name="query" placeholder="Rechercher">
+                    <button class="searchButton" type="submit">Go</button>
+                </form>
             </div>
         </nav>
     </header>

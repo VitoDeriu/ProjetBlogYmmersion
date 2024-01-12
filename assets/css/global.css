@@ -103,7 +103,7 @@ footer {
 .cat-btn:hover {
   background-color: var(--hover-bg-color);
   border-radius: 100px;
-  background: rgba(255, 123, 0, 0.815);
+  background: rgba(76, 88, 255, 0.815);
   border-radius: 100px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
@@ -129,7 +129,7 @@ footer {
   align-items: center;
   background-color: var(--hover-bg-color);
   border-radius: 100px;
-  background: rgba(255, 123, 0, 0.815);
+  background: rgba(76, 88, 255, 0.815);
   border-radius: 100px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);

@@ -7,26 +7,6 @@ html {
     font-size: 16px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #202124;
-    color: #9AA0A6;
-    line-height: 1.6;
-}
-
-
-/* a {
-    color: #4CAF50;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #45a049;
-} */
-
 .sidebar-left{
     display: flex;
     width: 15vw;
@@ -53,6 +33,7 @@ a:hover {
     margin: 5px;
     background-color: #3b3b3b;
     color: aliceblue;
+    border-radius: 20px;
  }
 
  .article{
@@ -65,6 +46,7 @@ a:hover {
     color: black;
     align-items: center;
     overflow: clip;
+    border-radius: 20px;
  }
 
  .article-title{
@@ -74,4 +56,14 @@ a:hover {
  .article img{
     height: 50vh;
     overflow: hidden;
+ }
+
+ .infoart{
+    display: flex;
+ }
+
+ .art-ctn{
+    width: 80%;
+    padding: 20px;
+    text-align: justify;
  }

@@ -35,48 +35,58 @@
             </div>
         </nav>
     </header>
-<div class="content">
-    <a href="/ajout" class="bouton">Ajouter un article</a>
-    <div class="main">
-        <div class="article">
+
+<span class="add"><a href="/ajout" class="add-art-btn">Ajouter un article</a></span>
+    
+    <div class="content">
+        
+        <div class="main">
             {{range .}}
+            <a href="/article?type={{.Id}}">
                 <div class="article">
-                    <img src={{.Img}} alt="image de l'article" class="article-img">
-                    <div class="article-text">
-                        <h1 class="article-title">{{.Name}}</h1>
-                        <div class="cat-art">{{.Category}}</div>
-                        <div class="date">{{.Date}}</div>
+                    <div class="artocle">
+                        <img src={{.Img}} alt="image de l'article" class="article-img">
+                        <div class="article-text">
+                            <h1 class="article-title">{{.Name}}</h1>
+                            <div class="cat-art">{{.Category}}</div>
+                            <div class="date">{{.Date}}</div>
+                        </div> 
                     </div>
-                </div>
+                    <div>
+                    <form action="">
+                        <input type="submit" value="Suppr" class="suppr-art-btn">
+                    </form> 
+                    </div>                  
+                </div>    
+            </a>
             {{end}}
         </div>
-    </div>
 
-</div>
+    </div>
 
     
 
     
 
 
-<footer>
-    <div class="nav-footer">
-        <div class="top-footer">
-            <div class="logo-footer"><img src="../static/img/logo_PGM.png" alt="logo du footer"></div>
-            <nav class="footer-links">
-                    <a href="/admin">administration</a>
-                    <a href="/ajout">ajouter un article</a>
-                    <a href="/categorie">catégorie</a>
-                    <a href="/mentionslegales">mentions légales</a>
-                    <a href="/recherche">rechercher</a>
-            </nav>
-            <div class="footer-phrase">Inshallah ca passe</div>
+    <footer>
+        <div class="nav-footer">
+            <div class="top-footer">
+                <div class="logo-footer"><img src="../static/img/logo_PGM.png" alt="logo du footer"></div>
+                <nav class="footer-links">
+                        <a href="/admin">administration</a>
+                        <a href="/ajout">ajouter un article</a>
+                        <a href="/categorie">catégorie</a>
+                        <a href="/mentionslegales">mentions légales</a>
+                        <a href="/recherche">rechercher</a>
+                </nav>
+                <div class="footer-phrase">Inshallah ca passe</div>
+            </div>
+            <div class="bot-footer">
+                Arneau Commeau Deriu Herry Jullemier
+            </div>
         </div>
-        <div class="bot-footer">
-            Arneau Commeau Deriu Herry Jullemier
-        </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
 {{end}}

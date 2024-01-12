@@ -6,5 +6,7 @@ import (
 )
 
 func Admin (w http.ResponseWriter, r *http.Request){
-	temps.Temp.ExecuteTemplate(w, "admin", nil)
+data := GetAllArticles()
+
+	temps.Temp.ExecuteTemplate(w, "admin", data)
 }

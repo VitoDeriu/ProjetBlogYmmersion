@@ -1,8 +1,78 @@
-body {
-    background-color: #202124;
-    color: #9AA0A6;
-    font-family: 'Arial', sans-serif;
-    margin: 0; 
-    padding: 0; 
-    line-height: 1.6; 
+*{
+    text-decoration: none;
 }
+
+/* html {
+    box-sizing: border-box;
+    font-size: 16px;
+} */
+
+.add-art-btn{
+    border-radius: 100px;
+    border: solid 1px;
+    height: 55px;
+    padding: 20px;
+    font-size: 1.2em;
+    color :aliceblue;
+    background-color: #3b3b3b;
+    display: flex;
+    align-items: center;
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;  
+    overflow: clip;  
+    margin: 5px;
+    background-color: #3b3b3b;
+    color: aliceblue;
+    border-radius: 20px;
+ }
+
+.article{
+    height: 200px;
+    margin: 20px;
+    border: solid 1px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: clip;
+    background-color: #fff;
+    color: black;
+}
+
+.artocle{
+    display: flex;
+}
+
+.artbtn{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.suppr-art-btn{
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    font-size: 0.8em;
+}
+
+.article img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    padding-left: 10px;
+    border-radius: 20px;
+ }
+
+ 

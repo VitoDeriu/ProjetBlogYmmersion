@@ -35,22 +35,18 @@
             </div>
         </nav>
     </header>
-
-
-
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Titre"/>
-        <input type="text" name="content" placeholder="Contenu de l'article"/>
-        <input type="text" name="author" placeholder="Auteur"/>
-        <input type="text" name="category" placeholder="Catégorie de l'article"/>
-        <input type="file" name="file" />
-        <input type="submit" value="Upload" />
-    </form>
-    il faudra un formulaire, avec les champs
-correspondant a la structure d'un article (soit : titre, auteur, date de
-creation, introduction et corps de l'article).
-
-
+    <div class="content">
+        <div class="main">
+            <form class="form" action="/upload" method="post" enctype="multipart/form-data">
+                <input class="form-txt" type="text" name="title" placeholder="Titre"/>
+                <input class="form-txt" type="text" name="author" placeholder="Auteur"/>
+                <input class="form-txt" type="text" name="category" placeholder="Catégorie de l'article"/>
+                <input class="form-txt-ctn" type="text" name="content" placeholder="Contenu de l'article"/>
+                <input class="form-file" type="file" name="file" />
+                <input class="form-submit" type="submit" value="Upload" />
+            </form>
+        </div>
+    </div>
 <footer>
     <div class="nav-footer">
         <div class="top-footer">

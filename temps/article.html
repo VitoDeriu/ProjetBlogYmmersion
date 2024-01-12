@@ -44,6 +44,7 @@
 
         <div class="main">
             {{range .}}
+                {{if eq .Id .Id}}
                 <div class="article">
                     <h1 class="article-title">{{.Name}}</h1>
                     <img src={{.Img}} alt="image de l'article" class="article-img">
@@ -51,9 +52,10 @@
                         <div class="date">{{.Date}}</div>
                         <div class="cat-art">{{.Category}}</div>
                     </div>
-                    <div class="art-pvw">{{.Content}}</div>
+                    <div class="art-ctn">{{.Content}}</div>
                     <div class="art-author">{{.Auteur}}</div>
                 </div>
+                {{end}}
         {{end}}
         </div> 
 
@@ -72,9 +74,9 @@
     cette page doit contenir l'article en
 détail avec son titre, image, introduction, auteur, date, corps de
 l'article.
-{{range .}}
+<!-- {{range .}}
  {{.}}
-{{end}}
+{{end}} -->
 
     <footer>
         <div class="nav-footer">

@@ -73,6 +73,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		Article.Content = r.FormValue("content")
 		Article.Auteur = r.FormValue("author")
 		Article.Category = r.FormValue("category")
+		Article.Preview = r.FormValue("preview")
 		Article.Date = GetCurrentTime()
 		Article.Img = handler.Filename
 		Article.Id = GetArticleId()

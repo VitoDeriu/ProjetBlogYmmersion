@@ -46,9 +46,9 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 	defer file.Close()
 
 	//Créa de l'img dans le dossier /assets/img
-
-	filePath := filepath.Join( /*"assets", "img",*/ handler.Filename)
-	outFile, err := os.Create(filePath)
+	path, _ := os.Getwd()
+	filePath := filepath.Join(path, "/assets/img/", handler.Filename)
+	outFile, err := os.OpenFile(filePath, os.O_CREATE, 0644)
 	if err != nil {
 		fmt.Println("Error creating the file")
 		fmt.Println(err)
@@ -74,9 +74,8 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		Article.Auteur = r.FormValue("author")
 		Article.Category = r.FormValue("category")
 		Article.Date = GetCurrentTime()
-		Article.Img = filePath
+		Article.Img = handler.Filename
 		Article.Id = GetArticleId()
-		fmt.Println(filePath)
 		AddArticle(Article, true)
 	} else if r.Method == "GET" {
 		temps.Temp.ExecuteTemplate(w, "ajout", nil)

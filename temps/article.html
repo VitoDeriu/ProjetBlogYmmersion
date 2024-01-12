@@ -30,8 +30,10 @@
                 </a>
             </div>
             <div class="searchBox">
-                <input class="searchInput"type="text" name="" placeholder="Rechercher">
-                <button class="searchButton" href="#">Go</button>
+                <form action="/rechercher" method="POST">
+                    <input class="searchInput"type="text" name="query" placeholder="Rechercher">
+                    <button class="searchButton" type="submit">Go</button>
+                </form>
             </div>
         </nav>
     </header>
@@ -40,14 +42,16 @@
         <div class="sidebar-left">
             votre pub ici les reufs
         </div>
-
-
         <div class="main">
             {{range .}}
                 {{if eq .Id .Id}}
                 <div class="article">
                     <h1 class="article-title">{{.Name}}</h1>
+<<<<<<< HEAD
                     <img src="{{.Img}}" alt="image de l'article" class="article-img">
+=======
+                    <img src="../static/img/{{.Img}}" alt="image de l'article" class="article-img">
+>>>>>>> d06275c8bb5ece365f0d4e17c0ba618456d3525e
                     <div class="infoart">                    
                         <div class="date">{{.Date}}</div>
                         <div class="cat-art">{{.Category}}</div>
@@ -56,28 +60,12 @@
                     <div class="art-author">{{.Auteur}}</div>
                 </div>
                 {{end}}
-        {{end}}
-        </div> 
-
-        
+            {{end}}
+        </div>        
         <div class="sidebar-right">
             votre pub ici les reufs
         </div> 
-
-
-
     </div>
-
-
-
-
-    cette page doit contenir l'article en
-détail avec son titre, image, introduction, auteur, date, corps de
-l'article.
-<!-- {{range .}}
- {{.}}
-{{end}} -->
-
     <footer>
         <div class="nav-footer">
             <div class="top-footer">

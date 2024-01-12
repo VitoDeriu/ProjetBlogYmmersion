@@ -3,7 +3,7 @@ package controller
 import (
 	"ProjetBlogYmmersion/data"
 	"ProjetBlogYmmersion/temps"
-	"fmt"
+
 	"net/http"
 	"strings"
 )
@@ -15,9 +15,6 @@ func Categorie(w http.ResponseWriter, r *http.Request) {
 		Type string
 	}
 	toSend := test{Data: dataa, Type: r.URL.Query().Get("type")}
-	fmt.Println(r.URL.Query().Get("type"))
-	//fmt.Println(toSend)
-	//fmt.Println(dataa)
 	temps.Temp.ExecuteTemplate(w, "categorie", toSend)
 }
 

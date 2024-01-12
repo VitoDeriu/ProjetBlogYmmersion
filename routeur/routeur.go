@@ -18,7 +18,6 @@ func InitServ() {
 	http.HandleFunc("/mentionslegales", controller.MentionsLegales)
 	http.HandleFunc("/rechercher", controller.RechercheTemp)
 	http.HandleFunc("/upload", controller.UploadFile)
-	//ne pas oublier de faire la route error 404, je sais plus comment elle se fait y'a un truc particulier dans la gestion d'erreur a mettre.
 
 	rootDoc, _ := os.Getwd()
 	fileserver := http.FileServer(http.Dir(rootDoc + "/assets"))

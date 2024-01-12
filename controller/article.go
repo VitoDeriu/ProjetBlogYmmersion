@@ -8,9 +8,7 @@ import (
 )
 
 func ArticleTemp(w http.ResponseWriter, r *http.Request) {
-	/*data := SearchId(r.URL.Query().Get("type"))
-	fmt.Println(data)
-	fmt.Println(r.URL.Query().Get("type"))*/
+
 	id, err := strconv.Atoi(r.URL.Query().Get("type"))
 	if err != nil {
 		http.Error(w, "ID invalide", http.StatusBadRequest)

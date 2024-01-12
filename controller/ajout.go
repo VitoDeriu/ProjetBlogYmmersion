@@ -15,25 +15,6 @@ func Ajout(w http.ResponseWriter, r *http.Request) {
 	temps.Temp.ExecuteTemplate(w, "ajout", nil)
 }
 
-/*var filePath string
-func Ajout(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "POST" {
-		r.ParseForm()
-		//récupération des données du formulaire
-		var Article data.ArtStruct
-		Article.Name = r.FormValue("title")
-		Article.Content = r.FormValue("content")
-		Article.Auteur = r.FormValue("author")
-		Article.Category = r.FormValue("category")
-		Article.Date = GetCurrentTime()
-		Article.Img = filePath
-		fmt.Println(filePath)
-		AddArticle(Article, true)
-	} else if r.Method == "GET" {
-		temps.Temp.ExecuteTemplate(w, "ajout", nil)
-	}
-}*/
-
 func UploadFile(w http.ResponseWriter, r *http.Request) {
 	// Récup du fichier img
 
@@ -64,7 +45,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Fprintf(w, "File uploaded successfully: %s", handler.Filename)
-	//time.Sleep(3 * time.Second)
+
 	if r.Method == "POST" {
 		r.ParseForm()
 		//récupération des données du formulaire

@@ -44,7 +44,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err)
 		return
 	}
-	fmt.Fprintf(w, "File uploaded successfully: %s", handler.Filename)
+	// fmt.Fprintf(w, "File uploaded successfully: %s", handler.Filename)
 
 	if r.Method == "POST" {
 		r.ParseForm()
@@ -62,6 +62,8 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 	} else if r.Method == "GET" {
 		temps.Temp.ExecuteTemplate(w, "ajout", nil)
 	}
+
+	temps.Temp.ExecuteTemplate(w, "ajout", nil)
 }
 
 // fonction pour ajouter un article à notre tableau et potentiellement au json

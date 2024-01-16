@@ -16,8 +16,8 @@ func Ajout(w http.ResponseWriter, r *http.Request) {
 }
 
 func UploadFile(w http.ResponseWriter, r *http.Request) {
+	
 	// Récup du fichier img
-
 	file, handler, err := r.FormFile("file")
 	if err != nil {
 		fmt.Println("Error retrieving the file")
@@ -36,7 +36,8 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	defer outFile.Close()
+	//pour fermer le fichier
+	defer outFile.Close() 
 
 	_, err = io.Copy(outFile, file)
 	if err != nil {
@@ -45,6 +46,9 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Fprintf(w, "File uploaded successfully: %s", handler.Filename)
+
+
+	//si j'ai bien compris, on stocke le fichier img dans file, le path du fichier dans filepath et on enregistre le tout (donc l'image) dans le projet dans le dossier img avec io.copy.
 
 	if r.Method == "POST" {
 		r.ParseForm()
@@ -59,8 +63,6 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		Article.Img = handler.Filename
 		Article.Id = GetArticleId()
 		AddArticle(Article, true)
-	} else if r.Method == "GET" {
-		temps.Temp.ExecuteTemplate(w, "ajout", nil)
 	}
 }
 

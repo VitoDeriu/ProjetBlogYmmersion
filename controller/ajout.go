@@ -16,7 +16,7 @@ func Ajout(w http.ResponseWriter, r *http.Request) {
 }
 
 func UploadFile(w http.ResponseWriter, r *http.Request) {
-	
+
 	// Récup du fichier img
 	file, handler, err := r.FormFile("file")
 	if err != nil {
@@ -37,7 +37,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//pour fermer le fichier
-	defer outFile.Close() 
+	defer outFile.Close()
 
 	_, err = io.Copy(outFile, file)
 	if err != nil {
@@ -45,8 +45,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err)
 		return
 	}
-	fmt.Fprintf(w, "File uploaded successfully: %s", handler.Filename)
-
+	// fmt.Fprintf(w, "File uploaded successfully: %s", handler.Filename)
 
 	//si j'ai bien compris, on stocke le fichier img dans file, le path du fichier dans filepath et on enregistre le tout (donc l'image) dans le projet dans le dossier img avec io.copy.
 
@@ -64,6 +63,8 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		Article.Id = GetArticleId()
 		AddArticle(Article, true)
 	}
+
+	temps.Temp.ExecuteTemplate(w, "ajout", nil)
 }
 
 // fonction pour ajouter un article à notre tableau et potentiellement au json

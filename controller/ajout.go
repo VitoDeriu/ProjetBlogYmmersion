@@ -64,7 +64,7 @@ func UploadFile(w http.ResponseWriter, r *http.Request) {
 		AddArticle(Article, true)
 	}
 
-	temps.Temp.ExecuteTemplate(w, "ajout", nil)
+	temps.Temp.ExecuteTemplate(w, "ajout", nil) //pas sur de celle là, elle réaffiche la page sans aucun feedback
 }
 
 // fonction pour ajouter un article à notre tableau et potentiellement au json

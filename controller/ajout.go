@@ -87,6 +87,8 @@ func GetCurrentTime() string {
 
 // Fonction qui récup la longueur du tableau d'Articles +1 pour un nouvel article
 func GetArticleId() int {
+	fmt.Println(len(Articles))	
 	id := len(Articles) + 1
+	fmt.Println(id)
 	return id
 }
